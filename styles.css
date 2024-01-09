@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.825rem;
+}
+
+.btn {
+  color: white;
+  background: red;
+  border-radius: 2rem;
+  width: 10rem;
+  height: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Header Section */
+
+header {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 999;
+  margin: -5.375rem 0;
+}
+
+.header-logo {
+  margin: 10px 3rem;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 3.688rem;
+  display: block;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .single-button {
+  cursor: pointer;
+  height: 4rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .single-button:last-child {
+  width: 10rem;
+  margin: 0.5rem 1.25rem;
+}
+
+#action {
+  width: 7.5rem;
+}
+
+nav .single-button p {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+nav .single-button:hover {
+  color: red;
+}
+
+@media only screen and (max-width: 1100px) {
+  header {
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+  }
+  
+  .header-logo {
+    margin: 10px 1rem;
+  }
+  nav .single-button {
+    height: 1rem;
+  }
+
+  nav .single-button:last-child {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media only screen and (max-width: 550px) {
+    nav {
+      padding: 0;
+      margin: 2rem 0rem;
+      margin-left: 2rem;
+      text-align: left;
+    }
+    nav .single-button {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}
+
+/* Hero Section */
+
+.hero-section {
+  background: url(/img/Hero-img.webp);
+  width: 100%;
+  height: 60rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin: 5.375rem 0;
+}
+
+.hero-container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text {
+  color: red;
+  font-weight: bold;
+  width: 40%;
+  min-width: 550px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.77);
+  padding-left: 1.5rem;
+  border-radius: 1rem;
+  margin: 5% 5%;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  margin-top: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.hero-text p {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 1rem 0.25rem;
+}
+
+.hero-btn {
+  background: rgba(244, 8, 8, 0.6);
+  height: 4.75rem;
+  font-size: 2.875rem;
+  width: 25rem;
+  margin: 0 13%;
+}
+
+@media only screen and (max-width: 1100px) {
+  .hero-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 845px) {
+  .hero-container {
+    padding-top: 5%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header-logo {
+    display: none;
+  }
+
+  .hero-section {
+    height: 50rem;
+    width: 100%;
+  }
+
+  .hero-text,
+  .hero-btn
+   {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+/* Links section */
+
+.links-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.single-link {
+  display: flex;
+  flex-direction: column;
+  width: 15.5rem;
+  padding: 1.5rem 0;
+}
+
+.single-link h3 {
+  padding: 1rem;
+}
+
+.single-link p {
+  font-size: 1.25rem;
+  width: 12.5rem;
+  margin-left: 8%;
+  line-height: 1.5;
+}
+
+.single-link .btn {
+  align-self: center;
+  margin-top: 2rem;
+}
+
+#gamepad p {
+  line-height: 2;
+}
+
+@media only screen and (max-width: 940px) {
+  .links-container {
+    flex-direction: column;
+  }
+
+  .single-link {
+    border: 2px solid red;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .single-link img {
+    width: 35%;
+  }
+
+  .single-link h3 {
+    width: 90%;
+    margin: 0;
+    font-size: 3rem;
+  }
+
+  .single-link p {
+    width: 90%;
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .single-link .links-btn {
+    width: 100%;
+    height: 3rem;
+  }
+
+  .single-link .links-btn p {
+  font-size: 3rem;
+  text-align: center;
+  }
+}
+
+/* Quote section */
+
+.quote-section {
+  width: 100%;
+  height: 8.569rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote-container {
+  font-size: 2rem;
+  letter-spacing: 0.15rem;
+}
+
+.quote-container p {
+  font-weight: bold;
+}
+
+.quote-container span {
+  float: right;
+  padding-right: 6.5rem;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  
+  .quote-section {
+    height: 12rem;
+  }
+
+  .quote-container p {
+    padding: 2rem;
+  }
+
+  .quote-container span {
+    margin-top: -1rem;
+  }
+}
+
+/* Club features section */
+
+.club-features {
+  width: 100%;
+  height: auto;
+}
+
+.grid-container {
+  width: 100%;
+  /* display: grid; */
+  grid-template-areas:
+    "impact-image impact-text"
+    "numbers numbers"
+    "social-learning diagram"
+    "philanthropy-img philanthropy";
+  grid-template: auto / 50% 50%;
+}
+
+.grid-item {
+  border: 2px solid red;
+  width: 50rem;
+  height: 30rem;
+}
+
+.img {
+  width: 50rem;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+}
+
+.impact-image-container {
+  grid-area: impact-image;
+}
+
+.impact {
+  grid-area: impact-text;
+}
+
+.numbers {
+  grid-area: numbers;
+}
+
+.social-learning {
+  grid-area: social-learning;
+}
+
+.diagram-container {
+  grid-area: diagram;
+}
+
+.philanthropy-image-container {
+  grid-area: philanthropy-img;
+}
+
+.philanthropy {
+  grid-area: philanthropy;
+}
