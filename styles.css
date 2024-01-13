@@ -6,6 +6,10 @@
 
 /* General styles */
 
+p {
+  font-size: 1.5rem;
+}
+
 h1,
 h2,
 h3 {
@@ -34,6 +38,11 @@ h3 {
   justify-content: center;
   align-items:center;
   cursor: pointer;
+
+  align-self: center;
+  text-align: center;
+  padding: 2rem 6rem;
+  font-size: 1.5rem;
 }
 
 .btn:hover {
@@ -88,13 +97,13 @@ header ul {
 header ul > li {
   cursor: pointer;
   height: 4rem;
-  width: 6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 1rem;
+  margin-right: 2rem;
 }
 
 header ul > li:hover {
@@ -109,7 +118,7 @@ header ul > li:last-child {
   width: 10rem;
   height: 3rem;
   margin: 0.5rem 1.25rem;
-  margin-left: 5rem;
+  margin-left: 3rem;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -218,6 +227,8 @@ header ul > li:last-child {
 @media only screen and (max-width: 845px) {
   .hero-container {
     padding-top: 5%;
+    transform: translateX(0);
+
   }
 }
 
@@ -297,11 +308,7 @@ header ul > li:last-child {
 }
 
 .single-link .btn {
-  align-self: center;
   margin-top: 0.5rem;
-  text-align: center;
-  padding: 2.5rem 8rem;
-  font-size: 1.5rem;
 }
 
 #gamepad h3 {
@@ -424,7 +431,6 @@ header ul > li:last-child {
     "social-learning diagram"
     "philanthropy-img philanthropy";
     margin: auto;
-    margin-top: 1.5rem;
 }
 
 .grid-container p, 
@@ -441,14 +447,14 @@ header ul > li:last-child {
 
 .grid-item {
   width: 100%;
-  height: 46rem;
+  height: auto;
   display: flex;
 }
 
 .grid-item .img {
   max-width: 100%;
   background-position: center;
-  background-size: cover;
+  background-size:cover;
 }
 
 .impact-image-container {
@@ -530,22 +536,16 @@ header ul > li:last-child {
   grid-area: diagram;
 }
 
-.diagram-container img {
-  margin-top: 2rem;
-  height: 41rem;
-  padding-right: 10rem;
-}
-
 .philanthropy-image-container {
   grid-area: philanthropy-img;
   position: relative;
-  height:58rem;
 }
 
 .philanthropy-image-container img {
   max-width: 100%;
   height: 100%;
   margin: auto;
+  height:58rem;
 }
 
 .philanthropy-image-container p {
@@ -560,10 +560,10 @@ header ul > li:last-child {
 
 .philanthropy {
   grid-area: philanthropy;
-  height: 58rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 .philanthropy .text {
