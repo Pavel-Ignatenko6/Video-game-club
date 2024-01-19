@@ -21,7 +21,6 @@ h2 {
   color: red;
 }
 
-
 h3 {
   font-size: 1.825rem;
 }
@@ -36,7 +35,7 @@ h3 {
   font-weight: bold;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   cursor: pointer;
 
   align-self: center;
@@ -56,6 +55,27 @@ section {
 img {
   max-width: 100%;
   display: block;
+}
+
+input {
+  width: 30rem;
+  border: none;
+  padding: 1.5rem 0.825rem;
+  font-size: 1.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+input:hover {
+  border: none;
+  color: red;
+  font-size: 1.6rem;
+  border-color: red;
+}
+input:hover::placeholder {
+  color: red;
 }
 
 /* Header Section */
@@ -110,17 +130,6 @@ header ul > li:hover {
   color: red;
 }
 
-#action {
-  width: 7.5rem;
-}
-
-header ul > li:last-child {
-  width: 10rem;
-  height: 3rem;
-  margin: 0.5rem 1.25rem;
-  margin-left: 3rem;
-}
-
 @media only screen and (max-width: 1100px) {
   header {
     justify-content: flex-start;
@@ -133,7 +142,7 @@ header ul > li:last-child {
     height: 1rem;
   }
 
-  header ul li:last-child {
+  .header-btn {
     display: none;
   }
 }
@@ -145,7 +154,6 @@ header ul > li:last-child {
   }
 
   @media only screen and (max-width: 550px) {
-
     header ul {
       padding: 0;
       padding-top: 4rem;
@@ -199,7 +207,6 @@ header ul > li:last-child {
 
 .hero-text h1 {
   font-size: 4rem;
-  margin-top: 0.5rem;
   margin-top: 2.5rem;
 }
 
@@ -228,7 +235,6 @@ header ul > li:last-child {
   .hero-container {
     padding-top: 5%;
     transform: translateX(0);
-
   }
 }
 
@@ -241,8 +247,8 @@ header ul > li:last-child {
     height: auto;
     width: 100%;
     margin-bottom: 1.5rem;
-    margin-top: 2rem ;
-    padding-top: .5rem;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
   }
 
   .hero-container {
@@ -257,14 +263,14 @@ header ul > li:last-child {
 
   .hero-text h1 {
     font-size: 3rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 
   .hero-text p {
     max-width: 20.5rem;
-    text-align:justify;
-    margin-left: 5.825rem;
-    line-height: 2;
+    text-align: justify;
+    margin: auto;
+    line-height: 1.5;
   }
 
   .hero-text,
@@ -280,15 +286,13 @@ header ul > li:last-child {
   display: flex;
   justify-content: space-evenly;
   max-width: 120rem;
-  margin: 0 auto;
-  margin-bottom: 4.25rem;
+  margin: 0 auto 4.25rem;
 }
 
 .single-link {
   display: flex;
   flex-direction: column;
   flex-shrink: 5;
-  width: 15.5rem;
   width: 17rem;
   padding: 1.5rem 0;
 }
@@ -363,7 +367,6 @@ header ul > li:last-child {
     border-radius: 0;
     padding: 1rem 0;
   }
-
 }
 
 /* Quote section */
@@ -393,8 +396,7 @@ header ul > li:last-child {
 .quote-container span {
   font-size: 1.5rem;
   align-self: center;
-  padding-top: .5rem;
-
+  padding-top: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
@@ -407,7 +409,7 @@ header ul > li:last-child {
   .quote-section {
     height: 17rem;
   }
-  
+
   .quote-container {
     min-width: 20rem;
     margin: 1rem;
@@ -430,32 +432,32 @@ header ul > li:last-child {
     "numbers-left numbers-right"
     "social-learning diagram"
     "philanthropy-img philanthropy";
-    margin: auto;
+  margin: auto;
 }
 
-.grid-container p, 
+.grid-container p,
 .grid-container ul {
   font-size: 2rem;
   font-weight: 500;
   padding-top: 2rem;
 }
- 
+
 .grid-container .btn {
   text-align: center;
-
 }
 
 .grid-item {
   width: 100%;
   height: auto;
   display: flex;
+  justify-content: center;
 }
 
 .grid-item .img {
   max-width: 100%;
   height: auto;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
 }
 
 .impact-image-container {
@@ -474,8 +476,8 @@ header ul > li:last-child {
 
 .impact {
   grid-area: impact-text;
-  justify-content: center;
 }
+
 .impact > div {
   padding: 4rem;
   max-width: 35rem;
@@ -488,18 +490,23 @@ header ul > li:last-child {
 .numbers {
   height: 16rem;
   font-size: 3.875rem;
-  margin-top: 2rem;
-  justify-content: space-evenly;
+  justify-content: space-around;
   text-align: center;
-  color: red;
 }
 
-.numbers p {
+.numbers span {
+  display: block;
   font-size: 2rem;
   font-weight: bold;
-  width: 15rem;
+  width: 14rem;
   color: black;
-  padding: 0;
+}
+
+.single-number span:first-child {
+  color: red;
+  font-size: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .numbers-left {
@@ -513,7 +520,6 @@ header ul > li:last-child {
 .social-learning {
   grid-area: social-learning;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   text-align: center;
   margin-bottom: 5rem;
@@ -530,19 +536,19 @@ header ul > li:last-child {
 }
 .social-learning .text p:last-child {
   padding-bottom: 3rem;
-
 }
 
 .diagram-container {
   grid-area: diagram;
 }
 
+.diagram-container img {
+  margin: auto;
+}
+
 .philanthropy-image-container {
   grid-area: philanthropy-img;
   position: relative;
-}
-
-.philanthropy-image-container img {
   margin: auto;
 }
 
@@ -559,7 +565,6 @@ header ul > li:last-child {
 .philanthropy {
   grid-area: philanthropy;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: 2rem;
 }
@@ -581,10 +586,11 @@ header ul > li:last-child {
 }
 
 @media only screen and (max-width: 1024px) {
-
   .grid-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 4rem;
+    width: 100%;
   }
 
   .grid-item {
@@ -592,6 +598,260 @@ header ul > li:last-child {
   }
 }
 
+/*  Join section */
+
+.join-section {
+  color: white;
+  font-weight: bold;
+  background: rgb(0, 138, 252);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.join-section .btn {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.join-text {
+  width: 60rem;
+  padding: 1rem 0;
+}
+
+.join-section h2 {
+  color: white;
+  font-size: 4rem;
+}
+
+.join-section p {
+  font-size: 2.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .join-text {
+    width: auto;
+  }
+}
+
+/* Contacts section */
+/* Form - left side */
+
+.contacts-container {
+  display: flex;
+  margin: auto;
+  max-width: 120rem;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: 0 auto;
+  width: 37rem;
+}
+
+.form-item {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.form-text {
+  margin-top: 3rem;
+  max-width: 29rem;
+  text-align: justify;
+}
+
+.form-text h3 {
+  font-size: 3rem;
+  /* Вопрос - почему "text-align:justify;" не работает на h3, когда я ставлю это Property только на контейнер?  */
+  text-align: justify;
+}
+
+.form-text p {
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.single-input {
+  border-bottom: 1px solid grey;
+}
+
+.single-input:hover {
+  border-bottom: 2px solid red;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.single-check-box {
+  border: none;
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+.single-check-box > input:checked {
+  color: red;
+  background-color: red;
+  border: none;
+}
+
+.single-check-box > input {
+  width: 2rem;
+  border: none;
+}
+
+/* social media - right side */
+
+.addresses-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.address,
+.socials {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 3rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.address span:first-child,
+.socials span:first-child {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.social-media-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30rem;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: black;
+}
+
+.icon-link:hover {
+  color: red;
+}
+
+.single-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 7.5rem;
+  height: 7rem;
+  margin: 1rem 0.825rem;
+  flex-shrink: 1;
+}
+
+.single-icon img {
+  width: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.go-back-link {
+  margin: 2rem;
+}
+
+@media only screen and (max-width: 930px) {
+  .contacts-container {
+    display: block;
+  }
+
+  form {
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+
+  .flex-container {
+    margin: 0;
+    width: 100%;
+  }
+
+  .social-media-img {
+    width: 100%;
+  }
+  .social-media-img img {
+    width: 100%;
+  }
+} 
+
+@media only screen and (max-width: 450px) {
+  .form-text h3 {
+    text-align: center;
+  }
+}
+
+/* Footer */
+
+footer {
+  background: rgb(4, 81, 132);
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.text-container {
+  max-width: 120rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 4rem 0;
+  line-height: 1.2;
+}
+
+.text-container h3 {
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.text-container p {
+  font-size: 1.25rem;
+  font-weight: 100;
+}
+
+.policy {
+  width: 30%;
+}
+
+.VGCUSA {
+  width: 15%;
+  margin-left: 2rem;
+  display: block;
+}
+
+@media only screen and (max-width: 930px) {
+  .text-container {
+    display: block;
+    margin: 2rem;
+    padding: 0;
+    line-height: 1.2;
+    text-align: justify;
+  }
+
+  .policy {
+    width: 100%;
+  }
+
+  .VGCUSA {
+    width: 100%;
+    margin-left: 0rem;
+    margin-top: 1rem;
+    display: block;
+  }
+}
 
 /* General Media Queries */
 
@@ -601,5 +861,3 @@ header ul > li:last-child {
     font-size: 1.825rem;
   }
 }
-
-
