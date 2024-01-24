@@ -37,8 +37,7 @@ h3 {
   color: white;
   background: red;
   border-radius: 2rem;
-  max-width: 23rem;
-  height: 3rem;
+  min-width: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,8 +45,8 @@ h3 {
   align-self: center;
   text-align: center;
   text-transform: uppercase;
-  padding: 2rem 6rem;
-  font-size: 1.25rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -201,26 +200,23 @@ header ul > li:hover {
 
 .hero-text {
   color: red;
-  font-weight: bold;
   width: 40%;
   min-width: 550px;
   height: auto;
   background: rgba(255, 255, 255, 0.77);
-  padding-left: 1.5rem;
   border-radius: 1rem;
   margin: 5% 5%;
 }
 
-.hero-text h1 {
-  font-size: 4rem;
+.hero-text h2 {
   margin-top: 1rem;
 }
 
 .hero-text p {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.825rem;
   line-height: 1.8;
-  margin: 1rem 0.25rem;
+  padding: 1rem;
 }
 
 .hero-btn {
@@ -268,14 +264,10 @@ header ul > li:hover {
     border-radius: 0;
   }
 
-  .hero-text h1 {
-    font-size: 3rem;
-    margin: 0.5rem;
-  }
-
   .hero-text p {
-    max-width: 21.5rem;
-    margin: auto;
+    max-width: 80%;
+    padding: 0;
+    margin: 1rem auto;
     line-height: 1.5;
   }
 
@@ -283,6 +275,15 @@ header ul > li:hover {
   .hero-btn {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .hero-text h2 {
+    font-size: 2.5rem;
+  }
+  .hero-text p {
+    font-size: 1.5rem;
   }
 }
 
@@ -299,7 +300,7 @@ header ul > li:hover {
   display: flex;
   flex-direction: column;
   flex-shrink: 5;
-  max-width: 17rem;
+  max-width: 16rem;
   padding: 1.5rem 0;
 }
 
@@ -419,11 +420,6 @@ header ul > li:hover {
 
 /* Club features section */
 
-.club-features {
-  width: 100%;
-  height: auto;
-}
-
 .grid-container {
   max-width: 120rem;
   display: grid;
@@ -434,6 +430,7 @@ header ul > li:hover {
     "social-learning diagram"
     "philanthropy-img philanthropy";
   margin: auto;
+  margin-bottom: 4rem;
 }
 
 .grid-container p,
@@ -480,10 +477,13 @@ header ul > li:hover {
 }
 
 .impact > div {
-  padding: 4rem;
-  max-width: 35rem;
+  /* padding: 4rem; */
+  max-width: 80%;
 }
 
+.impact > div ul {
+  padding-left: 2rem;
+}
 .impact > div ul > li {
   padding-bottom: 1rem;
 }
@@ -527,11 +527,11 @@ header ul > li:hover {
 }
 
 .social-learning .text {
-  max-width: 35rem;
+  max-width: 80%;
 }
 
 .social-learning .text p {
-  padding-left: 5rem;
+  padding-left: 2rem;
   max-width: 30rem;
 }
 .social-learning .text p:last-child {
@@ -570,14 +570,11 @@ header ul > li:hover {
 }
 
 .philanthropy .text {
-  max-width: 30rem;
-  margin-right: 3rem;
-  /* text-align: justify; */
+  max-width: 80%;
 }
 
 .philanthropy .text p {
-  padding: 0 3rem;
-  padding-top: 2rem;
+  padding-left: 2rem;
 }
 
 .philanthropy .text p:last-child {
@@ -595,6 +592,11 @@ header ul > li:hover {
 
   .grid-item {
     height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .numbers-left {
+    margin-bottom: 0;
   }
 }
 
@@ -662,8 +664,8 @@ header ul > li:hover {
 
 .contacts-container {
   display: flex;
-  margin: auto;
   max-width: 120rem;
+  margin: 2rem auto;
 }
 
 .flex-container {
@@ -672,23 +674,25 @@ header ul > li:hover {
   align-items: center;
   width: 50%;
   margin: 0 auto;
-  width: 37rem;
+}
+
+form {
+  background: transparent;
 }
 
 .form-item {
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .form-text {
-  margin-top: 3rem;
+  margin-top: 1rem;
   max-width: 29rem;
 }
 
 .form-text h3 {
   font-size: 2.5rem;
   line-height: 1.3;
-  /* Вопрос - почему "text-align:justify;" не работает на h3, когда я ставлю это Property только на контейнер?  */
   text-align: left;
 }
 
@@ -710,21 +714,76 @@ header ul > li:hover {
   flex-direction: column;
 }
 
-.single-check-box {
-  border: none;
-  display: flex;
+.checkbox-container span {
+  font-size: 1.375rem;
+}
+
+/* Customize the label (single-checkbox) */
+.single-checkbox {
+  display: block;
+  position: relative;
   padding-top: 0.5rem;
+  padding-left: 35px;
+  margin: 12px 0;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
 }
 
-.single-check-box > input:checked {
-  color: red;
-  background-color: red;
-  border: none;
+/* Hide the browser's default checkbox */
+.single-checkbox .input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 150px;
+  z-index: 999;
 }
 
-.single-check-box > input {
-  width: 2rem;
-  border: none;
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.single-checkbox:hover .input ~ .checkmark {
+  /* background-color: #ccc; */
+  border: 2px solid red;
+}
+
+/* When the checkbox is checked, add a blue background - оставил для примера*/
+/* .single-checkbox .input:checked ~ .checkmark {
+  background-color: #2196F3;
+} */
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.single-checkbox .input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.single-checkbox .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0px;
+  transform: rotate(45deg);
 }
 
 /* social media - right side */
@@ -833,8 +892,8 @@ footer {
 .text-container {
   max-width: 120rem;
   display: flex;
-  justify-content: center;
-  padding: 1rem 0 4rem 0;
+  justify-content: space-around;
+  padding: 1rem;
   line-height: 1.2;
 }
 
@@ -842,6 +901,7 @@ footer {
   font-size: 2rem;
   text-align: left;
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
 .text-container p {
   font-size: 1.25rem;
@@ -849,13 +909,31 @@ footer {
 }
 
 .policy {
-  width: 30%;
+  width: 35%;
 }
 
 .VGCUSA {
-  width: 15%;
-  margin-left: 2rem;
+  width: 25%;
+}
+
+.footer-address a {
+  color:antiquewhite;
+}
+
+@media only screen and (max-width: 1400px) {
+  .text-container {
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+  .policy {
+  width: 50%;
+}
+
+.VGCUSA {
+  width: 30%;
   display: block;
+}
 }
 
 @media only screen and (max-width: 930px) {
@@ -886,13 +964,11 @@ footer {
     width: 100%;
     height: 4rem;
     border-radius: 0;
-    /* margin: 0; */
   }
 }
 @media only screen and (max-width: 450px) {
-  h3,
-  .single-link h3 {
-    font-size: 1.825rem;
+  h2 {
+    font-size: 3rem;
   }
 
   input {

@@ -24,7 +24,7 @@
                 <li class="single-button">members</li>
                 <li class="single-button">programs</li>
                 <li class="single-button">merch</li>
-                <li id="action" class="single-button">take action</li>
+                <li class="single-button">take action</li>
             </ul>
             <button class="header-btn btn">Adopt Club</button>
         </div>
@@ -32,8 +32,8 @@
     <section class="hero-section">
         <div class="hero-container">
             <div class="hero-text">
-                <h1>Connecting Kids
-                    Through Gaming.</h1>
+                <h2>Connecting Kids
+                    Through Gaming.</h2>
                 <p>The Video Game Clubs of America provides starter kits to schools, libraries, and after school
                     organizations so that kids
                     can forge lifelong relationships through gaming, while promoting positive real world social
@@ -221,20 +221,23 @@
                 <div class="form-text">
                     <h3>Want to get involved?
                         Got an idea for us?</h3>
-                        <p>We are always looking for people who are willing to push VGCUSA forward. If you have an idea
-                            or are
-                            willing to volunteer
-                            some time with us, we are always grateful to have you.</p>
+                    <p>We are always looking for people who are willing to push VGCUSA forward. If you have an idea
+                        or are
+                        willing to volunteer
+                        some time with us, we are always grateful to have you.</p>
                 </div>
                 <form>
                     <div class="input-container form-item">
                         <div class="single-input"><input type="text" name="name" placeholder="Name"></div>
-                        <div class="single-input"><input type="text" name="email" placeholder="Email"></div>
-                        <div class="single-input"><input type="text" name="phone" placeholder="Phone"></div>
+                        <div class="single-input"><input type="email" name="email" placeholder="Email"></div>
+                        <div class="single-input"><input type="phone" name="phone" placeholder="Phone"></div>
                     </div>
-                    <div class="check-box-container form-item">
+                    <div class="checkbox-container form-item">
                         <span>What Best Describes You?</span>
-                        <div class="single-check-box">
+
+                        <!-- Customs checkboxes -->
+
+                        <!-- <div class="single-check-box">
                             <input type="checkbox" name="educator">
                             <label for="educator">Educator</label>
                         </div>
@@ -261,8 +264,41 @@
                         <div class="single-check-box">
                             <input type="checkbox" name="fundraiser">
                             <label for="fundraiser">Fundraiser</label>
-                        </div>
+                        </div> -->
+
+                        <label class="single-checkbox" for="educator">Educator
+                            <input type="checkbox" checked="checked" name="educator" class="input">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="single-checkbox" for="gamer">Gamer
+                            <input type="checkbox" name="gamer" class="input">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="single-checkbox" for="student">Student
+                            <input type="checkbox" name="student" class="input">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="single-checkbox" for="parent">Parent
+                            <input type="checkbox" name="parent" class="input">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="single-checkbox" for="fundraiser">Fundraiser
+                            <input type="checkbox" name="fundraiser" class="input">
+                            <span class="checkmark"></span>
+                        </label>
+
+                        <label class="single-checkbox" for="parent">Parent
+                            <input type="checkbox" name="parent" class="input">
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
+                    <!-- End of custom checkboxes -->
+
+
                     <button class="btn form-item" type="submit">SUBMIT</button>
                 </form>
             </div>
@@ -336,9 +372,9 @@
                     conversation can also adapt to
                     the mood.</p>
                 <br>
-                <address>
-                    <div>Email: info@vgcusa.org</div>
-                    <div>Phone: 443-745-6461</div>
+                <address class="footer-address">
+                    <div>Email: <a href="mailto:info@vgcusa.org">info@vgcusa.org</a></div>
+                    <div>Phone: <a href="tel:+443-745-6461">443-745-6461</a></div>
                     <div>Registered Charity: 83-2388950</div>
                 </address>
 
