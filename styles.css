@@ -54,7 +54,6 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
   align-self: center;
   text-align: center;
   text-transform: uppercase;
@@ -62,6 +61,7 @@ h3 {
   font-family: "Gill Sans", "Gill Sans MT", sans-serif;
   font-size: 1rem;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -92,7 +92,6 @@ input:hover {
   border: none;
   color: red;
   font-size: 1.6rem;
-  border-color: red;
 }
 input:hover::placeholder {
   color: red;
@@ -190,9 +189,9 @@ header ul > li {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 1rem;
   margin-right: 2rem;
 }
 
@@ -261,12 +260,10 @@ header ul > li:hover {
 /* Hero Section */
 
 .hero-section {
-  background: url(/img/Hero-img.webp);
+  background: url(/img/Hero-img.webp) no-repeat fixed top;
   width: 100%;
   height: 50rem;
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 .hero-container {
@@ -308,6 +305,7 @@ header ul > li:hover {
 @media only screen and (max-width: 1100px) {
   .hero-container {
     width: 100%;
+    transform: translateX(0);
   }
 
   .hero-text p {
@@ -315,19 +313,18 @@ header ul > li:hover {
   }
 }
 
-@media only screen and (max-width: 845px) {
+@media only screen and (max-width: 760px) {
   .hero-container {
+    max-width: 100%;
     padding-top: 5%;
-    transform: translateX(0);
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 650px) {
   .hero-section {
     height: auto;
     width: 100%;
     margin-bottom: 1.5rem;
-    /* margin-top: 5rem; */
   }
 
   .hero-container {
@@ -335,7 +332,7 @@ header ul > li:hover {
   }
 
   .hero-text {
-    margin: 4rem 0;
+    margin: 5rem 0;
     min-width: 100%;
     height: auto;
     border-radius: 0;
@@ -349,7 +346,8 @@ header ul > li:hover {
   }
 
   .hero-btn {
-    margin: 0;
+    margin: 0 0 1.5rem 0;
+    transform: translateX(0);
   }
 }
 
@@ -360,6 +358,10 @@ header ul > li:hover {
 
   .hero-text {
     margin: 2rem 0;
+  }
+
+  .hero-text h2 {
+    margin-top: 1.5rem;
   }
 }
 
@@ -481,46 +483,49 @@ header ul > li:hover {
   display: flex;
   flex-direction: column;
   letter-spacing: 0.15rem;
+  font-style: italic;
   padding: 2rem 6rem;
+  text-align: center;
+}
+
+.quote-section p {
+  font-size: 2rem;
 }
 
 .quote-section span {
   font-size: 1.5rem;
   font-weight: lighter;
+  font-style: normal;
   align-self: center;
   padding-top: 0.5rem;
 }
 
-@media only screen and (max-width: 768px) {
-  .quote-section span {
-    padding-top: 1rem;
-  }
-}
-
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 500px) {
   .quote-section {
     padding: 2rem 1rem;
-    font-size: 1rem;
   }
-  .quote-section p,
+
+  .quote-section p {
+    font-size: 1.5rem;
+  }
+
   .quote-section span {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 
 /* Club features section */
 
 .grid-container {
-  max-width: 120rem;
   display: grid;
-  width: 100%;
   grid-template-areas:
-    "impact-image impact-text"
-    "numbers-left numbers-right"
-    "social-learning diagram"
-    "philanthropy-img philanthropy";
-  margin: auto;
-  margin-bottom: 4rem;
+  "impact-image impact-text"
+  "numbers-left numbers-right"
+  "social-learning diagram"
+  "philanthropy-img philanthropy";
+  max-width: 120rem;
+  width: 100%;
+  margin: 0 auto 4rem;
 }
 
 .grid-container .btn {
@@ -540,8 +545,7 @@ header ul > li:hover {
 
 .grid-item p {
   width: 80%;
-  padding: 0 1rem;
-  padding-top: 1rem;
+  padding: 1rem 1rem 0;
   line-height: 1.3;
 }
 
@@ -597,8 +601,7 @@ header ul > li:hover {
 .single-number span:first-child {
   color: red;
   font-size: 5rem;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
+  padding: 2rem 0 1rem;
 }
 
 .numbers-left {
@@ -798,8 +801,7 @@ form {
 }
 
 .form-item {
-  margin: auto;
-  margin: 3rem .5rem 0 0;
+  margin: 3rem 0.5rem 0 0;
 }
 
 .form-container h2 {
@@ -838,8 +840,7 @@ form {
 .single-checkbox {
   display: block;
   position: relative;
-  padding-top: 0.5rem;
-  padding-left: 2.25rem;
+  padding: 0.5rem 0 0 2.25rem;
   margin: 12px 0;
   cursor: pointer;
   font-size: 1.5rem;
@@ -851,11 +852,11 @@ form {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
-  cursor: pointer;
+  z-index: 999;
   height: 25px;
   width: 150px;
-  z-index: 999;
+  opacity: 0;
+  cursor: pointer;
 }
 
 /* Create a custom checkbox */
@@ -874,7 +875,8 @@ form {
   border: 1px solid red;
 }
 
-/* When the checkbox is checked, add a blue background - оставил для примера*/
+/* оставил для примера v */
+/* When the checkbox is checked, add a blue background */
 /* .single-checkbox .input:checked ~ .checkmark {
   background-color: #2196F3;
 } */
@@ -900,6 +902,11 @@ form {
   border: solid black;
   border-width: 0 3px 3px 0px;
   transform: rotate(45deg);
+}
+
+/* Align text vertically and make space between checkbox and the text */
+.checkbox-wrapper {
+  padding: 1px 0 1px .5rem;
 }
 
 /* social media - right side */
@@ -996,9 +1003,7 @@ form {
     width: 100%;
   }
 
-  .social-media-img {
-    width: 100%;
-  }
+  .social-media-img,
   .social-media-img img {
     width: 100%;
   }
@@ -1094,8 +1099,8 @@ footer {
 .text-container h3 {
   font-size: 2rem;
   text-align: left;
-  margin-bottom: 0.5rem;
   text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 .text-container p {
   font-size: 1.25rem;
@@ -1144,7 +1149,6 @@ footer {
 
   .VGCUSA {
     width: 100%;
-    margin-left: 0rem;
     margin-top: 1rem;
     display: block;
   }
